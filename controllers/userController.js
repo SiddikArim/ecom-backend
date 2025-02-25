@@ -53,7 +53,7 @@ const registerUser = async (req, res) => {
     if (!validator.isEmail(email)) {
       return res.status(400).json({ success: false, message: "Invalid email" });
     }
-    if (password.length < 8) {
+    if (password.length < 7) {
       return res.status(400).json({
         success: false,
         message: "Password must be at least 8 characters",
